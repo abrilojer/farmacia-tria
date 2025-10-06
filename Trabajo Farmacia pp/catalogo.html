@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="style.css">
+  </head>
+ <body>
+
+ <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+
+ <div class="container">
+    <a href="#" class="navbar-brand"><span class="text-primary"> Farmacia </span>Tria</a>
+       <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbar-start" aria-controls="navbar-start" aria-expanded="false"
+            aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+       </button>
+      <div class="collapse navbar-collapse" id="navbar-start">
+         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+         <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+
+         </li>
+         <li class="nav-item">
+            <a class="nav-link" href="#">Servicios</a>
+
+         </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Nosotros</a>
+
+         </li>
+          <li class="nav-item">
+            <a class="nav-link" href="catalogo.html">Catalogo</a>
+
+         </li>
+         <li class="nav-item">
+            <a class="nav-link" href="contacto.html">Contacto</a>
+
+        </li>
+    </ul>
+  </div>
+
+</div>
+
+    </nav>
+
+<section id="medicamentos" class="py-5">
+    <div class="container">
+      <h2 class="mb-4">Medicamentos</h2>
+      <div class="row g-4">
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100">
+            <img src="img/PACK PARACETAMOL BAYER.jpg" class="card-img-top" alt="Medicamento 1">
+            <div class="card-body">
+              <h5 class="card-title">Paracetamol</h5>
+              <p class="card-text">Para aliviar el dolor leve o moderado / Reducir la fiebre.</p>
+              <p class="fw-bold">$5500</p>
+              <button class="btn btn-primary add-to-cart" data-id="med1" data-nombre="Medicamento 1" data-precio="500">Agregar al carrito</button>
+            </div>
+          </div>
+        </div>
+       <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100">
+            <img src="img/Tafirol-Forte-Caja.jpg" class="card-img-top" alt="Medicamento 1">
+            <div class="card-body">
+              <h5 class="card-title">Tafirol</h5>
+              <p class="card-text">Ayuda a aliviar dolores / Fiebre/ Molestias causada por gripe</p>
+              <p class="fw-bold">$3000</p>
+              <button class="btn btn-primary add-to-cart" data-id="med1" data-nombre="Medicamento 1" data-precio="500">Agregar al carrito</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100">
+            <img src="img/alernix.jpeg" class="card-img-top" alt="Medicamento 1">
+            <div class="card-body">
+              <h5 class="card-title">Alernix</h5>
+              <p class="card-text"> Para alergias de piel / Aliviar síntomas como picazón de ojos, nariz y garganta, lagrimeo y estornudos. </p>
+              <p class="fw-bold">$1500</p>
+              <button class="btn btn-primary add-to-cart" data-id="med1" data-nombre="Medicamento 1" data-precio="500">Agregar al carrito</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100">
+            <img src="img/geniol.jpg" class="card-img-top" alt="Medicamento 1">
+            <div class="card-body">
+              <h5 class="card-title">Geniol- 16 comp.</h5>
+              <p class="card-text">Analgesico antifebril / Para aliviar el dolor de cabeza, muscular, menstrual, articular y dental </p>
+              <p class="fw-bold">$2500</p>
+              <button class="btn btn-primary add-to-cart" data-id="med1" data-nombre="Medicamento 1" data-precio="500">Agregar al carrito</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100">
+            <img src="img/Mylanta_frutilla-300-dpi.jpg" class="card-img-top" alt="Medicamento 1">
+            <div class="card-body">
+              <h5 class="card-title">Mylantra Frutilla- 24comp. masticables</h5>
+              <p class="card-text">Para aliviar síntomas como malestar y acidez estomacal, indigestión ácida /Sin azucar</p>
+              <p class="fw-bold">$2300</p>
+              <button class="btn btn-primary add-to-cart" data-id="med1" data-nombre="Medicamento 1" data-precio="500">Agregar al carrito</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100">
+            <img src="img/ibu400.jpg" class="card-img-top" alt="Medicamento 1">
+            <div class="card-body">
+              <h5 class="card-title">Ibuprofeno 20comp.</h5>
+              <p class="card-text"> Para aliviar dolores/ Fiebre/ Inflamacion / Lesiones leves</p>
+              <p class="fw-bold">$4000</p>
+              <button class="btn btn-primary add-to-cart" data-id="med1" data-nombre="Medicamento 1" data-precio="500">Agregar al carrito</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100">
+            <img src="img/bayaspirina-x-30-comprimidos.jpg" class="card-img-top" alt="Medicamento 1">
+            <div class="card-body">
+              <h5 class="card-title">Bayaspirina-500mg</h5>
+              <p class="card-text">Contiene ácido acetilsalicílico / Para aliviar el dolor leve o moderado.</p>
+              <p class="fw-bold">$2500</p>
+              <button class="btn btn-primary add-to-cart" data-id="med1" data-nombre="Medicamento 1" data-precio="500">Agregar al carrito</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="productos" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="mb-4">Productos</h2>
+      <div class="row g-4">
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100">
+            <img src="img/aceite de bebe.jpg" class="card-img-top" alt="Producto 1">
+            <div class="card-body">
+              <h5 class="card-title">Johnson's baby Aceite- 10ml</h5>
+              <p class="card-text"> Puro/ humecta/ Protege piel y cabello</p>
+              <p class="fw-bold">$5000</p>
+              <button class="btn btn-primary add-to-cart" data-id="prod1" data-nombre="Producto 1" data-precio="300">Agregar al carrito</button>
+            </div>
+          </div>
+        </div>
+         <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100">
+            <img src="img/shampoo ortiga capilatis.jpeg" class="card-img-top" alt="Producto 1">
+            <div class="card-body">
+              <h5 class="card-title">Shampoo Capilatis Ortiga- 410ml</h5>
+              <p class="card-text">Shampoo tratante/ Con extractos de ortiga/ Para la caida del cabello.</p>
+              <p class="fw-bold">$8300</p>
+              <button class="btn btn-primary add-to-cart" data-id="prod1" data-nombre="Producto 1" data-precio="300">Agregar al carrito</button>
+            </div>
+          </div>
+        </div>
+         <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100">
+            <img src="img/acondicionador capilatis.jpeg" class="card-img-top" alt="Producto 1">
+            <div class="card-body">
+              <h5 class="card-title"> Acondicionador capilatis Ortiga - 410ml</h5>
+              <p class="card-text">Enjuague tratante / para la caida del cabello.</p>
+              <p class="fw-bold">$8300</p>
+              <button class="btn btn-primary add-to-cart" data-id="prod1" data-nombre="Producto 1" data-precio="300">Agregar al carrito</button>
+            </div>
+          </div>
+        </div>
+         <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100">
+            <img src="img/crema para peinar.png" class="card-img-top" alt="Producto 1">
+            <div class="card-body">
+              <h5 class="card-title">Garneir Fructis Aloe Hidra Clean - 250ml</h5>
+              <p class="card-text">Crema para peinar / 72h de hidratacion / Sin parabenos </p>
+              <p class="fw-bold">$2500</p>
+              <button class="btn btn-primary add-to-cart" data-id="prod1" data-nombre="Producto 1" data-precio="300">Agregar al carrito</button>
+            </div>
+          </div>
+        </div>
+         <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100">
+            <img src="img/JabonDove.jpg" class="card-img-top" alt="Producto 1">
+            <div class="card-body">
+              <h5 class="card-title">Jabon en Barra Dove - 90gr</h5>
+              <p class="card-text">Beauty bar humetante / Nutricion 24h.</p>
+              <p class="fw-bold">$1500</p>
+              <button class="btn btn-primary add-to-cart" data-id="prod1" data-nombre="Producto 1" data-precio="300">Agregar al carrito</button>
+            </div>
+          </div>
+        </div>
+         <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100">
+            <img src="img/VeritasJabon.jpeg" class="card-img-top" alt="Producto 1">
+            <div class="card-body">
+              <h5 class="card-title">Veritas Jabon de glicerina - 120gr</h5>
+              <p class="card-text">Hipolargenico / Para pieles sensibles / Sin perfume.</p>
+              <p class="fw-bold">$3200</p>
+              <button class="btn btn-primary add-to-cart" data-id="prod1" data-nombre="Producto 1" data-precio="300">Agregar al carrito</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="cosmeticos" class="py-5">
+    <div class="container">
+      <h2 class="mb-4">Cosméticos</h2>
+      <div class="row g-4">
+   
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100">
+            <img src="img/revlon lavial.jpeg" class="card-img-top" alt="Cosmético 1">
+            <div class="card-body">
+              <h5 class="card-title">Labial Super Lustrous 802</h5>
+              <p class="card-text">fórmula super humectante/ Acabado cremoso/ promete cuidado: gracias a su vitamina E y aceite de palta.</p>
+              <p class="fw-bold">$1300</p>
+              <button class="btn btn-primary add-to-cart" data-id="cosm1" data-nombre="Cosmético 1" data-precio="700">Agregar al carrito</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100">
+            <img src="img/pestanias.webp" class="card-img-top" alt="Cosmético 1">
+            <div class="card-body">
+              <h5 class="card-title">Máscara de Pestañas Extreme One Shot</h5>
+              <p class="card-text">Alarga y da volumen levantando cada pestaña</p>
+              <p class="fw-bold">$9240</p>
+              <button class="btn btn-primary add-to-cart" data-id="cosm1" data-nombre="Cosmético 1" data-precio="700">Agregar al carrito</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100">
+            <img src="img/cosm1.jpg" class="card-img-top" alt="Cosmético 1">
+            <div class="card-body">
+              <h5 class="card-title">Rubor Compacto Natura</h5>
+              <p class="card-text">textura suave/ Deja tu piel más viva y con aspecto saludable.</p>
+              <p class="fw-bold">$12000</p>
+              <button class="btn btn-primary add-to-cart" data-id="cosm1" data-nombre="Cosmético 1" data-precio="700">Agregar al carrito</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100">
+            <img src="img/tododia balsamo.jpeg" class="card-img-top" alt="Cosmético 1">
+            <div class="card-body">
+              <h5 class="card-title">Balsamo Labial Tododia</h5>
+              <p class="card-text">HSidratación profunda para labios / Textura cremosa </p>
+              <p class="fw-bold">$5000</p>
+              <button class="btn btn-primary add-to-cart" data-id="cosm1" data-nombre="Cosmético 1" data-precio="700">Agregar al carrito</button>
+            </div>
+          </div>
+        </div>
+         
+  </section>
+
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="carrito" aria-labelledby="carritoLabel" style="width:500px;">
+    <div class="offcanvas-header">
+      <h5 id="carritoLabel">Carrito de compras</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+    </div>
+    <div class="offcanvas-body d-flex flex-column">
+      <ul id="cart-items" class="list-group mb-3 flex-grow-1 overflow-auto"></ul>
+      <div class="mt-auto">
+        <p class="fw-bold">Total: $<span id="cart-total">0</span></p>
+        <button id="checkout-btn" class="btn btn-success w-100">Finalizar compra</button>
+      </div>
+    </div>
+  </div>
+
+            <section class="section-icons">
+
+                <div class="container">
+
+                    <div class="row">
+
+                        <div class="col-12 col-md-12 col-lg-4 box-icons">
+                            <div class="d-fix align-items-center">
+                                <i class="bi bi-airplane"></i>
+                                <div class="ms-4">
+                                    <h3>Envio gratis</h3>
+                                    <p>
+                                      
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="col-12 col-md-12 col-lg-4 box-icons">
+                            <div class="d-fix align-items-center">
+                                <i class="bi bi-cash-coin"></i>
+                                <div class="ms-4">
+                                    <h3>Cambio</h3>
+                                    <p>
+                                       
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="col-12 col-md-12 col-lg-4 box-icons">
+                            <div class="d-fix align-items-center">
+                                <i class="bi bi-gift-fill"></i>
+                                <div class="ms-4">
+                                    <h3>Regalos</h3>
+                                    <p>
+                                      
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+<div class="offcanvas offcanvas-end" tabindex="-1" id="carrito" aria-labelledby="carritoLabel" style="width:400px;">
+  <div class="offcanvas-header">
+    <h5 id="carritoLabel">Carrito de compras</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+  </div>
+  <div class="offcanvas-body d-flex flex-column">
+    <ul id="cart-items" class="list-group mb-3 flex-grow-1 overflow-auto"></ul>
+    <div class="mt-auto">
+      <p class="fw-bold">Total: $<span id="cart-total">0</span></p>
+      <button id="checkout-btn" class="btn btn-success w-100">Finalizar compra</button>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="metodosPagoModal" tabindex="-1" aria-labelledby="metodosPagoLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="metodosPagoLabel">Métodos de pago</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <div class="form-check">
+          <input class="form-check-input metodo-pago" type="radio" name="metodoPago" id="mp" value="mp">
+          <label class="form-check-label" for="mp">Mercado Pago</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input metodo-pago" type="radio" name="metodoPago" id="tarjeta" value="tarjeta">
+          <label class="form-check-label" for="tarjeta">Tarjeta</label>
+        </div>
+
+        <div id="formularioPago" class="mt-3" style="display: none;">
+          <div class="mb-3">
+            <label for="dni" class="form-label">DNI</label>
+            <input type="text" class="form-control" id="dni" maxlength="8" placeholder="">
+          </div>
+          <div class="mb-3">
+            <label for="codigo" class="form-label">Código</label>
+            <input type="password" class="form-control" id="codigo" placeholder="">
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button id="confirmarPagoBtn" class="btn btn-success">Confirmar pago</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const cartItemsEl = document.getElementById("cart-items");
+  const cartTotalEl = document.getElementById("cart-total");
+  let cart = [];
+
+  
+  document.querySelectorAll(".add-to-cart").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const card = btn.closest('.card');
+      const nombre = card.querySelector('.card-title').textContent;
+      const img = card.querySelector('img').src;
+      const precioText = card.querySelector('.fw-bold').textContent.replace('$', '').replace(/\./g, '');
+      const precio = Number(precioText);
+
+      const item = cart.find(i => i.nombre === nombre);
+      if(item) {
+        item.cantidad += 1;
+      } else {
+        cart.push({id: crypto.randomUUID(), nombre, precio, cantidad:1, img});
+      }
+
+      renderCart();
+      new bootstrap.Offcanvas(document.getElementById('carrito')).show();
+    });
+  });
+
+  
+  function renderCart() {
+    cartItemsEl.innerHTML = "";
+    let total = 0;
+
+    cart.forEach((i, index) => {
+      const li = document.createElement("li");
+      li.className = "list-group-item d-flex justify-content-between align-items-center";
+
+      const infoDiv = document.createElement("div");
+      infoDiv.className = "d-flex align-items-center";
+
+      const img = document.createElement("img");
+      img.src = i.img;
+      img.style.width = "50px";
+      img.style.height = "50px";
+      img.className = "me-2";
+
+      const namePriceDiv = document.createElement("div");
+      const nameEl = document.createElement("div");
+      nameEl.textContent = i.nombre;
+      const priceEl = document.createElement("div");
+      priceEl.className = "fw-bold";
+      priceEl.textContent = `$${i.precio * i.cantidad}`;
+
+      namePriceDiv.appendChild(nameEl);
+      namePriceDiv.appendChild(priceEl);
+      infoDiv.appendChild(img);
+      infoDiv.appendChild(namePriceDiv);
+
+      const buttonsDiv = document.createElement("div");
+      buttonsDiv.className = "d-flex flex-column align-items-end";
+
+      const plusBtn = document.createElement("button");
+      plusBtn.className = "btn btn-sm btn-secondary mb-1";
+      plusBtn.textContent = "+";
+      plusBtn.addEventListener("click", () => {
+        i.cantidad += 1;
+        renderCart();
+      });
+
+      const qtyText = document.createElement("span");
+      qtyText.textContent = `x${i.cantidad}`;
+      qtyText.className = "mb-1";
+
+      const minusBtn = document.createElement("button");
+      minusBtn.className = "btn btn-sm btn-secondary mb-1";
+      minusBtn.textContent = "-";
+      minusBtn.addEventListener("click", () => {
+        if(i.cantidad > 1) {
+          i.cantidad -= 1;
+        } else {
+          cart.splice(index, 1);
+        }
+        renderCart();
+      });
+
+      const removeBtn = document.createElement("button");
+      removeBtn.className = "btn btn-sm btn-danger";
+      removeBtn.textContent = "X";
+      removeBtn.addEventListener("click", () => {
+        cart.splice(index, 1);
+        renderCart();
+      });
+
+      buttonsDiv.appendChild(plusBtn);
+      buttonsDiv.appendChild(qtyText);
+      buttonsDiv.appendChild(minusBtn);
+      buttonsDiv.appendChild(removeBtn);
+
+      li.appendChild(infoDiv);
+      li.appendChild(buttonsDiv);
+      cartItemsEl.appendChild(li);
+
+      total += i.precio * i.cantidad;
+    });
+
+    cartTotalEl.textContent = total;
+  }
+
+  
+  document.getElementById("checkout-btn").addEventListener("click", () => {
+    if (cart.length === 0) {
+      alert("Tu carrito está vacío.");
+      return;
+    }
+
+    
+    document.getElementById("dni").value = "";
+    document.getElementById("codigo").value = "";
+    document.getElementById("formularioPago").style.display = "none";
+    document.querySelectorAll('input[name="metodoPago"]').forEach(el => el.checked = false);
+
+    const modal = new bootstrap.Modal(document.getElementById("metodosPagoModal"));
+    modal.show();
+  });
+
+ 
+  document.querySelectorAll(".metodo-pago").forEach(radio => {
+    radio.addEventListener("change", () => {
+      document.getElementById("formularioPago").style.display = "block";
+    });
+  });
+
+ 
+  document.getElementById("confirmarPagoBtn").addEventListener("click", () => {
+    const metodo = document.querySelector('input[name="metodoPago"]:checked');
+    const dni = document.getElementById("dni").value.trim();
+    const codigo = document.getElementById("codigo").value.trim();
+
+    if (!metodo) {
+      alert("Por favor, seleccioná un método de pago.");
+      return;
+    }
+
+    if (!/^\d{1,8}$/.test(dni)) {
+      alert("El DNI debe contener solo números y un máximo de 8 dígitos.");
+      return;
+    }
+
+    if (codigo.length === 0) {
+      alert("Por favor, ingresá el código.");
+      return;
+    }
+
+    alert("Compra finalizada correctamente. ¡Gracias por tu compra!");
+    cart = [];
+    renderCart();
+
+    const modal = bootstrap.Modal.getInstance(document.getElementById("metodosPagoModal"));
+    modal.hide();
+  });
+});
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

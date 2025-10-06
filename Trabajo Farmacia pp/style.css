@@ -1,0 +1,59 @@
+.carousel-item img {
+  height: 500px;
+  object-fit: cover;
+}
+footer {
+  background: #5bcfc4;
+  padding: 20px 0;
+  margin-top: 30px;
+  border-top: 1px solid #ddd;
+}
+
+
+body {
+  background-color: #b2dfdb;
+  padding-top: 70px;
+}
+.card img {
+  object-fit: cover;
+  height: 200px;
+}
+.offcanvas {
+  width: 400px;
+}
+.navbar {
+    background-color: #26a69a !important; 
+}
+
+
+.navbar .nav-link {
+    color: white !important; 
+}
+
+.navbar .nav-link.active {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.navbar .navbar-brand span {
+    color: white !important; 
+}
+.btn {
+    background-color: #00897b; 
+    border-color: #00897b;     
+    color: white;              
+}
+
+.btn:hover {
+    background-color: #00695c; 
+    border-color: #00695c;
+}
+
+.contact-form {
+  background: white;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 400px;
+}

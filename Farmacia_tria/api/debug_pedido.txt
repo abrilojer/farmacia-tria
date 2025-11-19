@@ -1,0 +1,25 @@
+=== CREAR PEDIDO ===
+Input: {"usuario_id":"2","items":[{"id_producto":"4","cantidad":3,"precio":2500}],"total":7500}
+Data: stdClass Object
+(
+    [usuario_id] => 2
+    [items] => Array
+        (
+            [0] => stdClass Object
+                (
+                    [id_producto] => 4
+                    [cantidad] => 3
+                    [precio] => 2500
+                )
+
+        )
+
+    [total] => 7500
+)
+
+Iniciando transacción...
+Pedido creado con ID: 1
+Insertando item: Producto 4, Cantidad 3
+✅ Pedido completado exitosamente
+=== FIN PEDIDO ===
+

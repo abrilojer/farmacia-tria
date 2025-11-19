@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+
+        <div class="container">
+            <a href="#" class="navbar-brand"><span class="text-primary"> Farmacia </span>Tria</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbar-start" aria-controls="navbar-start" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbar-start">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#servicios">Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#nosotros">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="catalogo.html">Catalogo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="mis-pedidos.html"><i class="bi bi-bag-check"></i> Mis Pedidos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html"><i class="bi bi-person-circle"></i> Iniciar Sesión</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="registro.html"><i class="bi bi-person-plus-fill"></i> Registro</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+    </nav>
+
+    <!-- BARRA DE BÚSQUEDA - AGREGAR AQUÍ -->
+    <section class="bg-light py-4" style="margin-top: 70px;">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-12 mb-3">
+                    <h4><i class="bi bi-search"></i> Buscar Productos</h4>
+                </div>
+
+                <!-- Buscador -->
+                <div class="col-md-6 mb-3">
+                    <div class="input-group">
+                        <span class="input-group-text bg-white">
+                            <i class="bi bi-search"></i>
+                        </span>
+                        <input type="text"
+                               class="form-control"
+                               id="busquedaInput"
+                               placeholder="Buscar por nombre o descripción...">
+                    </div>
+                </div>
+
+                <!-- Filtro por categoría -->
+                <div class="col-md-4 mb-3">
+                    <select class="form-select" id="filtroCategoria">
+                        <option value="todas">📦 Todas las categorías</option>
+                        <option value="medicamentos">💊 Medicamentos</option>
+                        <option value="productos">🧴 Productos de Cuidado</option>
+                        <option value="cosméticos">💄 Cosméticos</option>
+                    </select>
+                </div>
+
+                <!-- Botón limpiar -->
+                <div class="col-md-2 mb-3">
+                    <button class="btn btn-outline-secondary w-100" id="btnLimpiarBusqueda">
+                        <i class="bi bi-x-circle"></i> Limpiar
+                    </button>
+                </div>
+
+                <!-- Contador de resultados -->
+                <div class="col-md-12">
+                    <small class="text-muted">
+                        <i class="bi bi-info-circle"></i>
+                        <span id="contadorProductos">Cargando productos...</span>
+                    </small>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="medicamentos" class="py-5">
+        <div class="container">
+            <h2 class="mb-4">Medicamentos</h2>
+            <div class="row g-4">
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <img src="img/PACK PARACETAMOL BAYER.jpg" class="card-img-top" alt="Medicamento 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Paracetamol</h5>
+                            <p class="card-text">Para aliviar el dolor leve o moderado / Reducir la fiebre.</p>
+                            <p class="fw-bold">$5500</p>
+                            <button class="btn btn-primary add-to-cart" data-id="med1" data-nombre="Medicamento 1" data-precio="500">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <img src="img/Tafirol-Forte-Caja.jpg" class="card-img-top" alt="Medicamento 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Tafirol</h5>
+                            <p class="card-text">Ayuda a aliviar dolores / Fiebre/ Molestias causada por gripe</p>
+                            <p class="fw-bold">$3000</p>
+                            <button class="btn btn-primary add-to-cart" data-id="med1" data-nombre="Medicamento 1" data-precio="500">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <img src="img/alernix.jpeg" class="card-img-top" alt="Medicamento 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Alernix</h5>
+                            <p class="card-text"> Para alergias de piel / Aliviar síntomas como picazón de ojos, nariz y garganta, lagrimeo y estornudos. </p>
+                            <p class="fw-bold">$1500</p>
+                            <button class="btn btn-primary add-to-cart" data-id="med1" data-nombre="Medicamento 1" data-precio="500">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <img src="img/geniol.jpg" class="card-img-top" alt="Medicamento 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Geniol- 16 comp.</h5>
+                            <p class="card-text">Analgesico antifebril / Para aliviar el dolor de cabeza, muscular, menstrual, articular y dental </p>
+                            <p class="fw-bold">$2500</p>
+                            <button class="btn btn-primary add-to-cart" data-id="med1" data-nombre="Medicamento 1" data-precio="500">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <img src="img/Mylanta_frutilla-300-dpi.jpg" class="card-img-top" alt="Medicamento 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Mylantra Frutilla- 24comp. masticables</h5>
+                            <p class="card-text">Para aliviar síntomas como malestar y acidez estomacal, indigestión ácida /Sin azucar</p>
+                            <p class="fw-bold">$2300</p>
+                            <button class="btn btn-primary add-to-cart" data-id="med1" data-nombre="Medicamento 1" data-precio="500">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <img src="img/ibu400.jpg" class="card-img-top" alt="Medicamento 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Ibuprofeno 20comp.</h5>
+                            <p class="card-text"> Para aliviar dolores/ Fiebre/ Inflamacion / Lesiones leves</p>
+                            <p class="fw-bold">$4000</p>
+                            <button class="btn btn-primary add-to-cart" data-id="med1" data-nombre="Medicamento 1" data-precio="500">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <img src="img/bayaspirina-x-30-comprimidos.jpg" class="card-img-top" alt="Medicamento 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Bayaspirina-500mg</h5>
+                            <p class="card-text">Contiene ácido acetilsalicílico / Para aliviar el dolor leve o moderado.</p>
+                            <p class="fw-bold">$2500</p>
+                            <button class="btn btn-primary add-to-cart" data-id="med1" data-nombre="Medicamento 1" data-precio="500">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="productos" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="mb-4">Productos</h2>
+            <div class="row g-4">
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <img src="img/aceite de bebe.jpg" class="card-img-top" alt="Producto 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Johnson's baby Aceite- 10ml</h5>
+                            <p class="card-text"> Puro/ humecta/ Protege piel y cabello</p>
+                            <p class="fw-bold">$5000</p>
+                            <button class="btn btn-primary add-to-cart" data-id="prod1" data-nombre="Producto 1" data-precio="300">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <img src="img/shampoo ortiga capilatis.jpeg" class="card-img-top" alt="Producto 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Shampoo Capilatis Ortiga- 410ml</h5>
+                            <p class="card-text">Shampoo tratante/ Con extractos de ortiga/ Para la caida del cabello.</p>
+                            <p class="fw-bold">$8300</p>
+                            <button class="btn btn-primary add-to-cart" data-id="prod1" data-nombre="Producto 1" data-precio="300">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <img src="img/acondicionador capilatis.jpeg" class="card-img-top" alt="Producto 1">
+                        <div class="card-body">
+                            <h5 class="card-title"> Acondicionador capilatis Ortiga - 410ml</h5>
+                            <p class="card-text">Enjuague tratante / para la caida del cabello.</p>
+                            <p class="fw-bold">$8300</p>
+                            <button class="btn btn-primary add-to-cart" data-id="prod1" data-nombre="Producto 1" data-precio="300">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <img src="img/crema para peinar.png" class="card-img-top" alt="Producto 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Garneir Fructis Aloe Hidra Clean - 250ml</h5>
+                            <p class="card-text">Crema para peinar / 72h de hidratacion / Sin parabenos </p>
+                            <p class="fw-bold">$2500</p>
+                            <button class="btn btn-primary add-to-cart" data-id="prod1" data-nombre="Producto 1" data-precio="300">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <img src="img/JabonDove.jpg" class="card-img-top" alt="Producto 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Jabon en Barra Dove - 90gr</h5>
+                            <p class="card-text">Beauty bar humetante / Nutricion 24h.</p>
+                            <p class="fw-bold">$1500</p>
+                            <button class="btn btn-primary add-to-cart" data-id="prod1" data-nombre="Producto 1" data-precio="300">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <img src="img/VeritasJabon.jpeg" class="card-img-top" alt="Producto 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Veritas Jabon de glicerina - 120gr</h5>
+                            <p class="card-text">Hipolargenico / Para pieles sensibles / Sin perfume.</p>
+                            <p class="fw-bold">$3200</p>
+                            <button class="btn btn-primary add-to-cart" data-id="prod1" data-nombre="Producto 1" data-precio="300">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="cosmeticos" class="py-5">
+        <div class="container">
+            <h2 class="mb-4">Cosméticos</h2>
+            <div class="row g-4">
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <img src="img/revlon lavial.jpeg" class="card-img-top" alt="Cosmético 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Labial Super Lustrous 802</h5>
+                            <p class="card-text">fórmula super humectante/ Acabado cremoso/ promete cuidado: gracias a su vitamina E y aceite de palta.</p>
+                            <p class="fw-bold">$1300</p>
+                            <button class="btn btn-primary add-to-cart" data-id="cosm1" data-nombre="Cosmético 1" data-precio="700">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <img src="img/pestanias.webp" class="card-img-top" alt="Cosmético 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Máscara de Pestañas Extreme One Shot</h5>
+                            <p class="card-text">Alarga y da volumen levantando cada pestaña</p>
+                            <p class="fw-bold">$9240</p>
+                            <button class="btn btn-primary add-to-cart" data-id="cosm1" data-nombre="Cosmético 1" data-precio="700">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <img src="img/cosm1.jpg" class="card-img-top" alt="Cosmético 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Rubor Compacto Natura</h5>
+                            <p class="card-text">textura suave/ Deja tu piel más viva y con aspecto saludable.</p>
+                            <p class="fw-bold">$12000</p>
+                            <button class="btn btn-primary add-to-cart" data-id="cosm1" data-nombre="Cosmético 1" data-precio="700">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <img src="img/tododia balsamo.jpeg" class="card-img-top" alt="Cosmético 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Balsamo Labial Tododia</h5>
+                            <p class="card-text">HSidratación profunda para labios / Textura cremosa </p>
+                            <p class="fw-bold">$5000</p>
+                            <button class="btn btn-primary add-to-cart" data-id="cosm1" data-nombre="Cosmético 1" data-precio="700">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </div>
+
+    </section>
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="carrito" aria-labelledby="carritoLabel" style="width:500px;">
+        <div class="offcanvas-header">
+            <h5 id="carritoLabel">Carrito de compras</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+        </div>
+        <div class="offcanvas-body d-flex flex-column">
+            <ul id="cart-items" class="list-group mb-3 flex-grow-1 overflow-auto"></ul>
+            <div class="mt-auto">
+                <p class="fw-bold">Total: $<span id="cart-total">0</span></p>
+                <button id="checkout-btn" class="btn btn-success w-100">Finalizar compra</button>
+            </div>
+        </div>
+    </div>
+
+    <section class="section-icons">
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-12 col-md-12 col-lg-4 box-icons">
+                    <div class="d-fix align-items-center">
+                        <i class="bi bi-airplane"></i>
+                        <div class="ms-4">
+                            <h3>Envio gratis</h3>
+                            <p>
+
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-12 col-md-12 col-lg-4 box-icons">
+                    <div class="d-fix align-items-center">
+                        <i class="bi bi-cash-coin"></i>
+                        <div class="ms-4">
+                            <h3>Cambio</h3>
+                            <p>
+
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-12 col-md-12 col-lg-4 box-icons">
+                    <div class="d-fix align-items-center">
+                        <i class="bi bi-gift-fill"></i>
+                        <div class="ms-4">
+                            <h3>Regalos</h3>
+                            <p>
+
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="carrito" aria-labelledby="carritoLabel" style="width:400px;">
+        <div class="offcanvas-header">
+            <h5 id="carritoLabel">Carrito de compras</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+        </div>
+        <div class="offcanvas-body d-flex flex-column">
+            <ul id="cart-items" class="list-group mb-3 flex-grow-1 overflow-auto"></ul>
+            <div class="mt-auto">
+                <p class="fw-bold">Total: $<span id="cart-total">0</span></p>
+                <button id="checkout-btn" class="btn btn-success w-100">Finalizar compra</button>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="metodosPagoModal" tabindex="-1" aria-labelledby="metodosPagoLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="metodosPagoLabel">Métodos de pago</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-check">
+                        <input class="form-check-input metodo-pago" type="radio" name="metodoPago" id="mp" value="mp">
+                        <label class="form-check-label" for="mp">Mercado Pago</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input metodo-pago" type="radio" name="metodoPago" id="tarjeta" value="tarjeta">
+                        <label class="form-check-label" for="tarjeta">Tarjeta</label>
+                    </div>
+
+                    <div id="formularioPago" class="mt-3" style="display: none;">
+                        <div class="mb-3">
+                            <label for="dni" class="form-label">DNI</label>
+                            <input type="text" class="form-control" id="dni" maxlength="8" placeholder="">
+                        </div>
+                        <div class="mb-3">
+                            <label for="codigo" class="form-label">Código</label>
+                            <input type="password" class="form-control" id="codigo" placeholder="">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button id="confirmarPagoBtn" class="btn btn-success">Confirmar pago</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        console.log('🔵 ========== SCRIPT CARGADO ==========');
+
+        const API_URL = 'https://farmaciatria.rf.gd/api';
+
+        // RECUPERAR USUARIO DE sessionStorage
+        let usuarioGuardado = sessionStorage.getItem('usuarioActual');
+        if (usuarioGuardado) {
+            window.usuarioActual = JSON.parse(usuarioGuardado);
+            console.log('✅ Usuario recuperado de sesión:', window.usuarioActual);
+        } else {
+            window.usuarioActual = null;
+            console.log('❌ No hay usuario en sesión');
+        }
+
+        // CARRITO
+        let carritoActual = [];
+
+        function asignarEventosCarrito() {
+            document.querySelectorAll(".add-to-cart").forEach(btn => {
+                btn.addEventListener("click", () => {
+                    const id_producto = btn.getAttribute('data-id');
+                    const nombre = btn.getAttribute('data-nombre');
+                    const img = btn.getAttribute('data-img');
+                    const precio = Number(btn.getAttribute('data-precio'));
+                    const stock = parseInt(btn.getAttribute('data-stock'));
+
+                    const item = carritoActual.find(i => i.id_producto === id_producto);
+
+                    if (item) {
+                        if (item.cantidad >= stock) {
+                            alert(`Stock máximo: ${stock}`);
+                            return;
+                        }
+                        item.cantidad += 1;
+                    } else {
+                        carritoActual.push({
+                            id: crypto.randomUUID(),
+                            id_producto,
+                            nombre,
+                            precio,
+                            cantidad: 1,
+                            img,
+                            stock
+                        });
+                    }
+
+                    renderizarCarrito();
+                    new bootstrap.Offcanvas(document.getElementById('carrito')).show();
+                });
+            });
+        }
+
+        function renderizarCarrito() {
+            const cartItemsEl = document.getElementById("cart-items");
+            const cartTotalEl = document.getElementById("cart-total");
+
+            if (!cartItemsEl || !cartTotalEl) return;
+
+            cartItemsEl.innerHTML = "";
+            let total = 0;
+
+            carritoActual.forEach((item, index) => {
+                const li = document.createElement("li");
+                li.className = "list-group-item d-flex justify-content-between align-items-center";
+
+                li.innerHTML = `
+                    <div class="d-flex align-items-center">
+                        <img src="${item.img}" style="width:50px;height:50px" class="me-2">
+                        <div>
+                            <div>${item.nombre}</div>
+                            <div class="fw-bold">$${item.precio * item.cantidad}</div>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column align-items-end">
+                        <button class="btn btn-sm btn-secondary mb-1 btn-plus">+</button>
+                        <span class="mb-1">x${item.cantidad}</span>
+                        <button class="btn btn-sm btn-secondary mb-1 btn-minus">-</button>
+                        <button class="btn btn-sm btn-danger btn-remove">X</button>
+                    </div>
+                `;
+
+                li.querySelector('.btn-plus').addEventListener('click', () => {
+                    if (item.cantidad >= item.stock) {
+                        alert(`Stock máximo: ${item.stock}`);
+                        return;
+                    }
+                    item.cantidad++;
+                    renderizarCarrito();
+                });
+
+                li.querySelector('.btn-minus').addEventListener('click', () => {
+                    if (item.cantidad > 1) {
+                        item.cantidad--;
+                    } else {
+                        carritoActual.splice(index, 1);
+                    }
+                    renderizarCarrito();
+                });
+
+                li.querySelector('.btn-remove').addEventListener('click', () => {
+                    carritoActual.splice(index, 1);
+                    renderizarCarrito();
+                });
+
+                cartItemsEl.appendChild(li);
+                total += item.precio * item.cantidad;
+            });
+
+            cartTotalEl.textContent = total;
+        }
+
+        function finalizarCompra() {
+            console.log('🔵 Intentando finalizar compra...');
+            console.log('Usuario actual:', window.usuarioActual);
+
+            if (carritoActual.length === 0) {
+                alert("Tu carrito está vacío.");
+                return;
+            }
+
+            if (!window.usuarioActual || !window.usuarioActual.id) {
+                console.log('❌ No hay usuario logueado - BLOQUEADO');
+                alert('⛔ Debes iniciar sesión para realizar una compra.\n\n¿Deseas ir a iniciar sesión?');
+
+                if (confirm('Haz clic en Aceptar para ir al login')) {
+                    window.location.href = 'login.html';
+                }
+                return;
+            }
+
+            console.log('✅ Usuario logueado, continuando...');
+
+            document.getElementById("dni").value = "";
+            document.getElementById("codigo").value = "";
+            document.getElementById("formularioPago").style.display = "none";
+            document.querySelectorAll('input[name="metodoPago"]').forEach(el => el.checked = false);
+
+            new bootstrap.Modal(document.getElementById("metodosPagoModal")).show();
+        }
+
+        function confirmarPago() {
+            console.log('🔵 Confirmando pago...');
+
+            const metodo = document.querySelector('input[name="metodoPago"]:checked');
+            const dni = document.getElementById("dni").value.trim();
+            const codigo = document.getElementById("codigo").value.trim();
+
+            if (!metodo || !/^\d{1,8}$/.test(dni) || !codigo) {
+                alert("Por favor completa todos los campos correctamente.");
+                return;
+            }
+
+            const total = carritoActual.reduce((sum, item) => sum + (item.precio * item.cantidad), 0);
+
+            const pedidoData = {
+                usuario_id: window.usuarioActual.id,
+                items: carritoActual.map(item => ({
+                    id_producto: item.id_producto,
+                    cantidad: item.cantidad,
+                    precio: item.precio
+                })),
+                total: total
+            };
+
+            console.log('📦 Enviando pedido:', pedidoData);
+
+            fetch(`${API_URL}/crear_pedido.php`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(pedidoData)
+            })
+                .then(response => response.text())
+                .then(text => {
+                    console.log('Respuesta pedido:', text);
+                    const data = JSON.parse(text);
+
+                    if (data.pedido_id) {
+                        console.log('✅ Pedido creado:', data.pedido_id);
+
+                        return fetch(`${API_URL}/procesar_pago.php`, {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({
+                                pedido_id: data.pedido_id,
+                                metodo_pago: metodo.value === 'mp' ? 'Mercado Pago' : 'Tarjeta',
+                                dni: dni,
+                                codigo: codigo
+                            })
+                        });
+                    } else {
+                        throw new Error(data.message || 'Error al crear el pedido');
+                    }
+                })
+                .then(response => response.text())
+                .then(text => {
+                    console.log('Respuesta pago:', text);
+                    alert("¡Compra finalizada correctamente!");
+                    carritoActual = [];
+                    renderizarCarrito();
+                    bootstrap.Modal.getInstance(document.getElementById("metodosPagoModal")).hide();
+                })
+                .catch(error => {
+                    console.error('❌ Error:', error);
+                    alert('Error: ' + error.message);
+                });
+        }
+
+        // Variables globales para búsqueda
+        let todosLosProductos = [];
+
+        function cargarProductosDesdeDB() {
+            console.log('🔵 Cargando productos...');
+
+            fetch(`${API_URL}/productos.php`)
+                .then(response => response.json())
+                .then(productos => {
+                    console.log('✅ Productos cargados:', productos.length);
+
+                    // Guardar todos los productos para búsqueda
+                    todosLosProductos = productos;
+
+                    // Renderizar todos
+                    renderizarTodosLosProductos(productos);
+                })
+                .catch(error => {
+                    console.error('Error al cargar productos:', error);
+                });
+        }
+
+        function renderizarTodosLosProductos(productos) {
+            const medicamentos = productos.filter(p => p.nombre_categoria === 'Medicamentos');
+            const productosPersonales = productos.filter(p => p.nombre_categoria === 'Productos');
+            const cosmeticos = productos.filter(p => p.nombre_categoria === 'Cosméticos');
+
+            renderizarCategoria('medicamentos', medicamentos);
+            renderizarCategoria('productos', productosPersonales);
+            renderizarCategoria('cosmeticos', cosmeticos);
+
+            actualizarContador(productos.length);
+        }
+
+        function buscarProductos() {
+            const textoBusqueda = document.getElementById('busquedaInput').value.toLowerCase();
+            const categoriaFiltro = document.getElementById('filtroCategoria').value;
+
+            let productosFiltrados = todosLosProductos;
+
+            // Filtrar por texto
+            if (textoBusqueda) {
+                productosFiltrados = productosFiltrados.filter(p =>
+                    p.nombre_producto.toLowerCase().includes(textoBusqueda) ||
+                    p.descripcion.toLowerCase().includes(textoBusqueda)
+                );
+            }
+
+            // Filtrar por categoría
+            if (categoriaFiltro && categoriaFiltro !== 'todas') {
+                productosFiltrados = productosFiltrados.filter(p =>
+                    p.nombre_categoria.toLowerCase() === categoriaFiltro.toLowerCase()
+                );
+            }
+
+            renderizarTodosLosProductos(productosFiltrados);
+
+            if (productosFiltrados.length === 0) {
+                mostrarSinResultados();
+            }
+        }
+
+        function mostrarSinResultados() {
+            document.querySelectorAll('.row.g-4').forEach(contenedor => {
+                contenedor.innerHTML = `
+            <div class="col-12">
+                <div class="alert alert-warning text-center py-5">
+                    <i class="bi bi-search fs-1 d-block mb-3"></i>
+                    <h5>No se encontraron productos</h5>
+                    <p class="text-muted">Intenta con otros términos de búsqueda</p>
+                    <button class="btn btn-primary" onclick="limpiarBusqueda()">
+                        <i class="bi bi-x-circle"></i> Limpiar búsqueda
+                    </button>
+                </div>
+            </div>
+        `;
+            });
+        }
+
+        function limpiarBusqueda() {
+            document.getElementById('busquedaInput').value = '';
+            document.getElementById('filtroCategoria').value = 'todas';
+            renderizarTodosLosProductos(todosLosProductos);
+        }
+
+        function actualizarContador(cantidad) {
+            const contador = document.getElementById('contadorProductos');
+            if (contador) {
+                contador.textContent = `${cantidad} producto${cantidad !== 1 ? 's' : ''} encontrado${cantidad !== 1 ? 's' : ''}`;
+            }
+        }
+
+        function renderizarCategoria(seccionId, productos) {
+            const seccion = document.getElementById(seccionId);
+            if (!seccion) return;
+
+            const contenedor = seccion.querySelector('.row.g-4');
+            if (!contenedor) return;
+
+            contenedor.innerHTML = '';
+
+            productos.forEach(producto => {
+                const col = document.createElement('div');
+                col.className = 'col-12 col-md-6 col-lg-4';
+
+                const sinStock = producto.stock <= 0;
+
+                col.innerHTML = `
+                    <div class="card h-100">
+                        <img src="${producto.imagen_url}" class="card-img-top" alt="${producto.nombre_producto}">
+                        <div class="card-body">
+                            <h5 class="card-title">${producto.nombre_producto}</h5>
+                            <p class="card-text">${producto.descripcion}</p>
+                            <p class="fw-bold">$${producto.precio}</p>
+                            ${sinStock ?
+                        '<button class="btn btn-secondary w-100" disabled>Agotado</button>' :
+                        `<button class="btn btn-primary add-to-cart w-100"
+                                    data-id="${producto.id_producto}"
+                                    data-nombre="${producto.nombre_producto}"
+                                    data-precio="${producto.precio}"
+                                    data-img="${producto.imagen_url}"
+                                    data-stock="${producto.stock}">
+                                    Agregar al carrito
+                                </button>`
+                    }
+                        </div>
+                    </div>
+                `;
+
+                contenedor.appendChild(col);
+            });
+
+            asignarEventosCarrito();
+        }
+
+
+        function actualizarNavbar() {
+            if (window.usuarioActual && window.usuarioActual.correo) {
+                console.log('🔵 Actualizando navbar para:', window.usuarioActual.correo);
+
+                const navLinks = document.querySelectorAll('.navbar-nav');
+                navLinks.forEach(nav => {
+                    const loginLink = nav.querySelector('a[href="login.html"]');
+                    if (loginLink) {
+                        loginLink.innerHTML = `<i class="bi bi-person-check-fill"></i> ${window.usuarioActual.correo}`;
+                        loginLink.style.color = '#28a745';
+                        loginLink.style.fontWeight = 'bold';
+                        loginLink.href = '#';
+
+                        // Agregar botón de cerrar sesión
+                        loginLink.addEventListener('click', (e) => {
+                            e.preventDefault();
+                            if (confirm('¿Deseas cerrar sesión?')) {
+                                sessionStorage.removeItem('usuarioActual');
+                                window.usuarioActual = null;
+                                window.location.reload();
+                            }
+                        });
+                    }
+
+                    const registroLink = nav.querySelector('a[href="registro.html"]');
+                    if (registroLink) {
+                        registroLink.style.display = 'none';
+                    }
+                });
+            }
+        }
+
+        // INICIALIZACIÓN
+        document.addEventListener("DOMContentLoaded", () => {
+            console.log('🔵 DOM cargado - Inicializando...');
+
+            cargarProductosDesdeDB();
+
+            const checkoutBtn = document.getElementById("checkout-btn");
+            if (checkoutBtn) {
+                checkoutBtn.addEventListener("click", finalizarCompra);
+                console.log('✅ Evento checkout asignado');
+            }
+
+            document.querySelectorAll(".metodo-pago").forEach(radio => {
+                radio.addEventListener("change", () => {
+                    document.getElementById("formularioPago").style.display = "block";
+                });
+            });
+
+            const confirmarPagoBtn = document.getElementById("confirmarPagoBtn");
+            if (confirmarPagoBtn) {
+                confirmarPagoBtn.addEventListener("click", confirmarPago);
+            }
+            const inputBusqueda = document.getElementById('busquedaInput');
+            if (inputBusqueda) {
+                inputBusqueda.addEventListener('input', buscarProductos);
+            }
+
+            const filtroCategoria = document.getElementById('filtroCategoria');
+            if (filtroCategoria) {
+                filtroCategoria.addEventListener('change', buscarProductos);
+            }
+
+            const btnLimpiar = document.getElementById('btnLimpiarBusqueda');
+            if (btnLimpiar) {
+                btnLimpiar.addEventListener('click', limpiarBusqueda);
+            }
+
+            actualizarNavbar();
+        });
+
+        console.log('✅ Script completamente cargado');
+    </script>
+
+</body>
+</html>

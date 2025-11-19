@@ -1,0 +1,13 @@
+=== REGISTRO ===
+Correo: hola@gmail.com
+❌ Correo ya existe
+=== REGISTRO ===
+Correo: hbnugoi9@gmail.com
+✅ Usuario creado ID: 6
+=== FIN ===
+
+=== REGISTRO ===
+Correo: abiojer1@gmail.com
+✅ Usuario creado ID: 7
+=== FIN ===
+

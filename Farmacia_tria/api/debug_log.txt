@@ -1,0 +1,104 @@
+=== NUEVO REQUEST ===
+Método: POST
+POST data: Array
+(
+)
+
+Input raw: {"correo":"hola@gmail.com","contrasena":"123456"}
+Data decodificada: stdClass Object
+(
+    [correo] => hola@gmail.com
+    [contrasena] => 123456
+)
+
+Datos válidos recibidos
+Intentando crear usuario...
+Hash generado: $2y$10$XG9ebDw4OB.Aep/V61H//.xr8LM74cP1zjs9W0fmgnjRTfQxx8cJu
+? Usuario creado con ID: 2
+=== FIN REQUEST ===
+
+=== NUEVO REQUEST ===
+Método: GET
+POST data: Array
+(
+)
+
+Input raw: 
+? Método no es POST: GET
+=== FIN REQUEST ===
+
+=== NUEVO REQUEST ===
+Método: GET
+POST data: Array
+(
+)
+
+Input raw: 
+? Método no es POST: GET
+=== FIN REQUEST ===
+
+=== NUEVO REQUEST ===
+Método: GET
+POST data: Array
+(
+)
+
+Input raw: 
+? Método no es POST: GET
+=== FIN REQUEST ===
+
+=== NUEVO REQUEST ===
+Método: POST
+POST data: Array
+(
+)
+
+Input raw: {"correo":"hola@gmail.com","contrasena":"123456"}
+Data decodificada: stdClass Object
+(
+    [correo] => hola@gmail.com
+    [contrasena] => 123456
+)
+
+Datos válidos recibidos
+Correo ya existe
+=== FIN REQUEST ===
+
+=== NUEVO REQUEST ===
+Método: POST
+POST data: Array
+(
+)
+
+Input raw: {"correo":"adscf@wsrgdv.com","contrasena":"a<zfrbhgy"}
+Data decodificada: stdClass Object
+(
+    [correo] => adscf@wsrgdv.com
+    [contrasena] => a<zfrbhgy
+)
+
+Datos válidos recibidos
+Intentando crear usuario...
+Hash generado: $2y$10$YOOu2vVK1BdQVIX0Yso28e6pbdowhY3tluKEYMSVLFjOQFtLGbzd.
+? Usuario creado con ID: 3
+=== FIN REQUEST ===
+
+=== NUEVO REQUEST ===
+Método: POST
+POST data: Array
+(
+)
+
+Input raw: {"correo":"rdfhdsfrxgh@gmail.com","contrasena":"123456"}
+Data decodificada: stdClass Object
+(
+    [correo] => rdfhdsfrxgh@gmail.com
+    [contrasena] => 123456
+)
+
+Datos válidos recibidos
+Intentando crear usuario...
+Hash generado: $2y$10$sPE5Ki7YqpmRGqJyiVj9LOi5DdlDPUqlNt720UWxIDbc0K4BhgZjO
+? Usuario creado con ID: 4
+=== FIN REQUEST ===
+

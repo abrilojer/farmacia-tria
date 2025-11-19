@@ -1,0 +1,52 @@
+=== SOLICITUD ===
+POST: Array
+(
+    [correo] => abiojer1@gmail.com
+)
+
+Correo recibido: abiojer1@gmail.com
+Conexión BD OK
+Usuario encontrado
+Código generado: 834621
+Código guardado en BD
+Respuesta enviada OK
+
+=== SOLICITUD ===
+POST: Array
+(
+    [correo] => abiojer1@gmail.com
+)
+
+Correo recibido: abiojer1@gmail.com
+Conexión BD OK
+Usuario encontrado
+Código generado: 060125
+Código guardado en BD
+Respuesta enviada OK
+
+=== SOLICITUD ===
+POST: Array
+(
+    [correo] => abiojer1@gmail.com
+)
+
+Correo recibido: abiojer1@gmail.com
+Conexión BD OK
+Usuario encontrado
+Código generado: 583399
+Código guardado en BD
+Respuesta enviada OK
+
+=== SOLICITUD ===
+POST: Array
+(
+    [correo] => abiojer1@gmail.com
+)
+
+Correo recibido: abiojer1@gmail.com
+Conexión BD OK
+Usuario encontrado
+Código generado: 430164
+Código guardado en BD
+Respuesta enviada OK
+

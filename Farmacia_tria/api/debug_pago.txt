@@ -1,0 +1,6 @@
+=== PROCESAR PAGO ===
+Input: {"pedido_id":"1","metodo_pago":"Mercado Pago","dni":"441685","codigo":"41685"}
+Procesando pago para pedido: 1
+✅ Pago procesado exitosamente
+=== FIN PAGO ===
+

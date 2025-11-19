@@ -1,0 +1,119 @@
+=== LOGIN REQUEST ===
+Método: POST
+Recibido como FormData
+Buscando usuario: hola@gmail.com
+Usuario encontrado, verificando contraseña
+✅ Login exitoso
+=== FIN LOGIN ===
+
+=== LOGIN REQUEST ===
+Método: POST
+Recibido como FormData
+Buscando usuario: hola@gmail.com
+Usuario encontrado, verificando contraseña
+❌ Contraseña incorrecta
+=== FIN LOGIN ===
+
+=== LOGIN REQUEST ===
+Método: POST
+Recibido como FormData
+Buscando usuario: hoa@gmail.com
+❌ Usuario no encontrado
+=== FIN LOGIN ===
+
+=== LOGIN REQUEST ===
+Método: POST
+Recibido como FormData
+Buscando usuario: hola@gmail.com
+Usuario encontrado, verificando contraseña
+✅ Login exitoso
+=== FIN LOGIN ===
+
+=== LOGIN REQUEST ===
+Método: POST
+Recibido como FormData
+Buscando usuario: hola@gmail.com
+Usuario encontrado, verificando contraseña
+✅ Login exitoso
+=== FIN LOGIN ===
+
+=== LOGIN REQUEST ===
+Método: POST
+Recibido como FormData
+Buscando usuario: hola@gmail.com
+Usuario encontrado, verificando contraseña
+✅ Login exitoso
+=== FIN LOGIN ===
+
+=== LOGIN REQUEST ===
+Método: POST
+Recibido como FormData
+Buscando usuario: hola@gmail.com
+Usuario encontrado, verificando contraseña
+✅ Login exitoso
+=== FIN LOGIN ===
+
+=== LOGIN REQUEST ===
+Método: POST
+Recibido como FormData
+Buscando usuario: hola@gmail.com
+Usuario encontrado, verificando contraseña
+✅ Login exitoso
+=== FIN LOGIN ===
+
+=== LOGIN REQUEST ===
+Método: POST
+Recibido como FormData
+Buscando usuario: hola@gmail.com
+Usuario encontrado, verificando contraseña
+✅ Login exitoso
+=== FIN LOGIN ===
+
+=== LOGIN REQUEST ===
+Método: POST
+Recibido como FormData
+Buscando usuario: hola@gmail.com
+Usuario encontrado, verificando contraseña
+✅ Login exitoso
+=== FIN LOGIN ===
+
+=== LOGIN REQUEST ===
+Método: POST
+Recibido como FormData
+Buscando usuario: hola@gmail.com
+Usuario encontrado, verificando contraseña
+✅ Login exitoso
+=== FIN LOGIN ===
+
+=== LOGIN REQUEST ===
+Método: POST
+Recibido como FormData
+Buscando usuario: hola@gmail.com
+Usuario encontrado, verificando contraseña
+✅ Login exitoso
+=== FIN LOGIN ===
+
+=== LOGIN REQUEST ===
+Método: POST
+Recibido como FormData
+Buscando usuario: hola@gmail.com
+Usuario encontrado, verificando contraseña
+✅ Login exitoso
+=== FIN LOGIN ===
+
+=== LOGIN REQUEST ===
+Método: POST
+Recibido como FormData
+Buscando usuario: hola@gmail.com
+Usuario encontrado, verificando contraseña
+✅ Login exitoso
+=== FIN LOGIN ===
+
+=== LOGIN REQUEST ===
+Método: POST
+Recibido como FormData
+Buscando usuario: abiojer1@gmail.com
+Usuario encontrado, verificando contraseña
+❌ Contraseña incorrecta
+=== FIN LOGIN ===
+

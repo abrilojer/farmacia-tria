@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Iniciar Sesión - Farmacia Tria</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a href="index.html" class="navbar-brand"><span class="text-primary"> Farmacia </span>Tria</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbar-start" aria-controls="navbar-start" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbar-start">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#servicios">Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#nosotros">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="catalogo.html">Catalogo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html"><i class="bi bi-person-circle"></i> Iniciar Sesión</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="registro.html"><i class="bi bi-person-plus-fill"></i> Registro</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container py-5 d-flex justify-content-center align-items-center min-vh-100">
+        <div class="contact-form">
+            <h3 class="text-center mb-4 text-primary">Iniciar Sesión</h3>
+            <form id="formLogin">
+                <div class="mb-3">
+                    <label for="correo" class="form-label">Correo electrónico</label>
+                    <input type="email" class="form-control" id="correo" placeholder="tu@correo.com" required />
+                    <div class="invalid-feedback"></div>
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Contraseña</label>
+                    <input type="password" class="form-control" id="password" placeholder="Tu contraseña" required />
+                    <div class="invalid-feedback"></div>
+                </div>
+                <div class="mb-3">
+                    <a href="registro.html">¿Aún no tienes una cuenta? Regístrate aquí</a>
+                </div>
+                <div class="mb-3">
+                    <a href="recuperar-password.html" class="text-muted">
+                        <i class="bi bi-key"></i> ¿Olvidaste tu contraseña?
+                    </a>
+                </div>
+                <button type="submit" class="btn btn-success w-100 mt-3">Iniciar Sesión</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        console.log('🔵 Login.html cargado');
+
+        const API_URL = 'https://farmaciatria.rf.gd/api';
+
+        function mostrarError(inputId, mensaje) {
+            const input = document.getElementById(inputId);
+            if (!input) return;
+
+            const feedbackDiv = input.nextElementSibling;
+            input.classList.add('is-invalid');
+
+            if (feedbackDiv && feedbackDiv.classList.contains('invalid-feedback')) {
+                feedbackDiv.textContent = mensaje;
+                feedbackDiv.style.display = 'block';
+            }
+        }
+
+        function limpiarErrores() {
+            document.querySelectorAll('.is-invalid').forEach(el => {
+                el.classList.remove('is-invalid');
+            });
+            document.querySelectorAll('.invalid-feedback').forEach(el => {
+                el.style.display = 'none';
+                el.textContent = '';
+            });
+        }
+
+        function mostrarAlerta(mensaje, tipo = 'danger') {
+            const alertDiv = document.createElement('div');
+            alertDiv.className = `alert alert-${tipo} alert-dismissible fade show`;
+            alertDiv.role = 'alert';
+            alertDiv.innerHTML = `
+                    ${mensaje}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                `;
+
+            const container = document.querySelector('.container');
+            if (container) {
+                container.insertBefore(alertDiv, container.firstChild);
+                setTimeout(() => alertDiv.remove(), 5000);
+            }
+        }
+
+        function iniciarSesion(event) {
+            event.preventDefault();
+            console.log('🔵 Iniciando login...');
+            limpiarErrores();
+
+            const correo = document.getElementById('correo').value;
+            const password = document.getElementById('password').value;
+
+            if (!correo || !password) {
+                if (!correo) mostrarError('correo', 'El correo es obligatorio');
+                if (!password) mostrarError('password', 'La contraseña es obligatoria');
+                return;
+            }
+
+            const formData = new FormData();
+            formData.append('correo', correo);
+            formData.append('contrasena', password);
+
+            console.log('Enviando login...');
+
+            fetch(`${API_URL}/login.php`, {
+                method: 'POST',
+                body: formData
+            })
+                .then(response => {
+                    console.log('Status login:', response.status);
+                    return response.text();
+                })
+                .then(text => {
+                    console.log('Respuesta login:', text);
+                    const data = JSON.parse(text);
+
+                    if (data.usuario_id) {
+                        console.log('✅ Login exitoso, guardando usuario...');
+
+                        // GUARDAR EN MEMORIA Y sessionStorage
+                        const usuarioData = {
+                            id: data.usuario_id,
+                            correo: data.correo
+                        };
+
+                        window.usuarioActual = usuarioData;
+                        sessionStorage.setItem('usuarioActual', JSON.stringify(usuarioData));
+
+                        console.log('Usuario guardado:', window.usuarioActual);
+                        console.log('SessionStorage:', sessionStorage.getItem('usuarioActual'));
+
+                        mostrarAlerta('¡Inicio de sesión exitoso! Redirigiendo...', 'success');
+
+                        setTimeout(() => {
+                            window.location.href = 'catalogo.html';
+                        }, 1500);
+                    } else if (data.message === "Usuario no encontrado.") {
+                        mostrarError('correo', 'No existe una cuenta con este correo.');
+                    } else if (data.message === "Contraseña incorrecta.") {
+                        mostrarError('password', 'La contraseña es incorrecta.');
+                    } else {
+                        mostrarAlerta(data.message, 'danger');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    mostrarAlerta('Error al conectar con el servidor.', 'danger');
+                });
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            console.log('🔵 DOM login cargado');
+
+            const formLogin = document.getElementById('formLogin');
+            if (formLogin) {
+                formLogin.addEventListener('submit', iniciarSesion);
+                console.log('✅ Evento login asignado');
+            } else {
+                console.error('❌ No se encontró el formulario con id="formLogin"');
+            }
+
+            document.querySelectorAll('input').forEach(input => {
+                input.addEventListener('input', () => {
+                    input.classList.remove('is-invalid');
+                    const feedback = input.nextElementSibling;
+                    if (feedback && feedback.classList.contains('invalid-feedback')) {
+                        feedback.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        console.log('✅ Script login cargado');
+    </script>
+
+</body>
+</html>
